@@ -24,20 +24,11 @@
 
                         <x-jet-validation-errors class="mb-4" />
 
-<<<<<<< HEAD
                         @if (session('status'))
                         <div class="mb-4 font-short text-sm text-blue-1000">
                             {{ session('status') }}
                         </div>
                         @endif
-=======
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
->>>>>>> 1089deb4807546dfa16aad82f29e432b856c95a3
 
 
 
