@@ -19,7 +19,7 @@
 		<a href="#1">Acerca de</a>
 		<a href="#2">servicios</a>
 		<a href="#3">Contactos</a>
-		<a href="#4">Ingresar</a>
+		<a href="{{ route('login') }}">Ingresar</a>
 		<span class="indicador" id="indicador"></span>
 	</nav>
 
