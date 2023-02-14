@@ -17,7 +17,7 @@
     
                 <form class="form">
                     <x-jet-authentication-card>
-                        <h2>Login </h2>
+                        <h2>Inicio de Sesión</h2>
                         <x-slot name="logo">
                             <x-jet-authentication-card-logo />
                         </x-slot>
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="mt-4" x-data="{show: false}">
-                            <x-jet-label for="password" value="{{ __('Password') }}" />
+                            <x-jet-label for="password" value="{{ __('Contraseña') }}" />
                             <input id="password" class="block mt-1 w-full" :type="show ? 'text' : 'password'" name="password"
                                 required autocomplete="current-password" />
 
@@ -71,12 +71,12 @@
                             @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900"
                                 href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
+                                {{ __('¿Olvidaste tu contraseña?') }}
                             </a>
                             @endif
 
                             <x-jet-button class="ml-4">
-                                {{ __('Log in') }}
+                                {{ __('Iniciar Sesión') }}
                             </x-jet-button>
                         </div>
                     </x-jet-authentication-card>
