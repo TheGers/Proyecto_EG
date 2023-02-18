@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\facturacionController;
+use App\Http\Controllers\reportedeventasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,15 @@ Route::middleware([
     Route::get('/admin', function () {
         return view('admin,index');
     })->name('admin');
+});
+
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+
+    Route::get('/dashboard',function(){
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::resource('facturacion',facturacionController::class)->names('facturacion');
+    Route::resource('reportedeventas', reportedeventasController::class)->names('reportedeventas');
+
 });

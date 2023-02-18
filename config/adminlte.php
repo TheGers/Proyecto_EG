@@ -367,30 +367,33 @@ return [
                 ],
             ],
         ],*/
-        ['header' => 'USUARIOS'],
+        ['header' => 'Usuarios'],
         [
             'text'       => 'Usuarios',
             'route' => 'admin.usuarios.index',
-            'icon_color' => 'fas fa-fw fas fw-cubes', 
+            'icon_color' => 'fas fa-fw fas fw-cubes',
         ],
 
 
-        ['header' => 'Inicio'],
+        ['header' => 'Ventas'],
         [
-            'text'       => 'Usuarios',
+            'text'       => 'Facturacion',
+            'icon_color' => 'blue',
+            'url'        => '/facturacion',
+        ],
+        [
+            'text'       => 'Reporte de Ventas',
+            'icon_color' => 'blue',
+            'url'        => '/reportedeventas',
+        ],
+
+        ['header' => 'Compras'],
+        [
+            'text'       => 'Compras',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => '/compras',
         ],
-        [
-            'text'       => 'Clientes',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'Productos',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*
