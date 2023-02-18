@@ -38,4 +38,6 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::resource('facturacion',facturacionController::class)->names('facturacion');
     Route::resource('reportedeventas', reportedeventasController::class)->names('reportedeventas');
 
+
+
 });
