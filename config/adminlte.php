@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Dashboard',
+    'title' => 'Home',
     'title_prefix' => '',
     'title_postfix' => '',
 
