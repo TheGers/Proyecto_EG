@@ -394,6 +394,18 @@ return [
             'url'        => '/compras',
         ],
 
+        ['header' => 'Productos'],
+        [
+            'text'       => 'Producto',
+            'icon_color' => 'yellow',
+            'url'        => '/producto',
+        ],
+        [
+            'text'       => 'Inventario',
+            'icon_color' => 'yellow',
+            'url'        => '/inventario',
+        ],
+
     ],
 
     /*

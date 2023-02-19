@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\facturacionController;
+use App\Http\Controllers\productocontroller;
 use App\Http\Controllers\reportedeventasController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 
     Route::resource('facturacion',facturacionController::class)->names('facturacion');
     Route::resource('reportedeventas', reportedeventasController::class)->names('reportedeventas');
+    Route::resource('producto', productocontroller::class)->names('producto');
 
 
 
