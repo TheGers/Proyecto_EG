@@ -14,7 +14,7 @@ class facturacionController extends Controller
      */
     public function index()
     {
-        //
+        return view('Ventas.Facturacion.facturacionIndex');
     }
 
     /**

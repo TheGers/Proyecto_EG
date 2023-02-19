@@ -14,7 +14,7 @@ class reportedeventasController extends Controller
      */
     public function index()
     {
-        //
+        return view('Ventas.ReporteDeVentas.reportedeventasIndex');
     }
 
     /**
