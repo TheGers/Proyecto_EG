@@ -12,6 +12,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+         
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
         <!-- Styles -->
         @livewireStyles
