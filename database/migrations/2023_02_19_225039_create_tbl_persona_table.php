@@ -32,8 +32,8 @@ return new class extends Migration
             $table->integer('tbl_persona_tbl_persona_cod_persona');
             $table->string('estado')->nullable();
 
-            $table->primary(['cod_persona', 'tbl_persona_cod_persona', 'tbl_persona_cod_persona1', 'tbl_persona_tbl_persona_cod_persona']);
             $table->index(['tbl_persona_cod_persona1', 'tbl_persona_tbl_persona_cod_persona'], 'fk_tbl_persona_tbl_persona2_idx');
+            $table->primary(['cod_persona', 'tbl_persona_cod_persona', 'tbl_persona_cod_persona1', 'tbl_persona_tbl_persona_cod_persona']);
         });
     }
 
