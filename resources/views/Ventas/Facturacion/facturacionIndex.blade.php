@@ -156,29 +156,29 @@
                             </div>
                         </div>
 
-                            <!-- MOSTRAR TOTALES -->
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <span>SUBTOTAL</span>
-                                </div>
-                                <div class="col-md-5 text-right">
-                                    L./ <span class="" id="boleta_subtotal">0.00</span>
-                                </div>
-
-                                <div class="col-md-7">
-                                    <span>ISV</span>
-                                </div>
-                                <div class="col-md-5 text-right">
-                                    L./ <span class="" id="boleta_ISV">0.00</span>
-                                </div>
-
-                                <div class="col-md-7">
-                                    <span>TOTAL</span>
-                                </div>
-                                <div class="col-md-5 text-right">
-                                    L./ <span class="" id="boleta_total">0.00</span>
-                                </div>
+                        <!-- MOSTRAR TOTALES -->
+                        <div class="row">
+                            <div class="col-md-7">
+                                <span>SUBTOTAL</span>
                             </div>
+                            <div class="col-md-5 text-right">
+                                L./ <span class="" id="boleta_subtotal">0.00</span>
+                            </div>
+
+                            <div class="col-md-7">
+                                <span>ISV</span>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                L./ <span class="" id="boleta_ISV">0.00</span>
+                            </div>
+
+                            <div class="col-md-7">
+                                <span>TOTAL</span>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                L./ <span class="" id="boleta_total">0.00</span>
+                            </div>
+                        </div>
 
                     </div><!-- ./ CARD BOOY -->
 
@@ -187,18 +187,55 @@
         </div>
     </div>
 
-                    @stop
+    <script>
+        var table;
+        $(document).ready(function() {
 
-                    @section('content')
+            // <!-- ./ INICIAR LA TABLA DE VENTAS -->
+            table = $('#lstProductosVenta').DataTable({
+                columnDefs: [{
+                        targets: 0,
+                        visible: false
+                    },
+                    {
+                        targets: 3,
+                        visible: false
+                    },
+                    {
+                        targets: 2,
+                        visible: false
+                    },
+                    {
+                        targets: 6,
+                        orderable: false
+                    },
+                    {
+                        targets: 9,
+                        visible: false
+                    }
+                ],
+                "order": [
+                    [0. 'desc']
+                ],
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.20/118n/Spanish.json"
+                }
+            });
+        })
+    </script>
 
-                    @stop
+@stop
 
-                    @section('css')
-                        <link rel="stylesheet" href="/css/admin_custom.css">
-                    @stop
+@section('content')
 
-                    @section('js')
-                        <script>
-                            console.log('Hi!');
-                        </script>
-                    @stop
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script>
+        console.log('Hi!');
+    </script>
+@stop
