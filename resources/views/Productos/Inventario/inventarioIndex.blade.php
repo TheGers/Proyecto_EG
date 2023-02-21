@@ -5,21 +5,18 @@
 <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @stop
 
-@section('title', 'Productos')
+@section('title', 'Inventario')
 
 
 @section('content_header')
-    <h3> Listado de productos</h3>
+    <h3>Inventario</h3>
     <hr class ="bg-dark border-1 border-top border-dark">
 
 @stop
 
 @section('content')
 
-<!-- <a href="Productos.Producto.productoCreate" class="btn btn-primary">CREAR</a> -->
-<a href="Productos/Producto/productoCreate"> 
-   <span>Nuevo producto</span> <i class = "fas fa-plus-square"></i>
-</a>
+<!-- <a href="Producto/productoCreate" class="btn btn-primary">CREAR</a> -->
 
 
 
@@ -29,30 +26,34 @@
             <tr>
                 <th>#</th>
                 <th scope="col">Código</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Existencia</th>
-                <th scope="col">Categoría</th>
+                <th scope="col">Codigo Mov.</th>
+                <th scope="col">Codigo Producto</th>
+                <th scope="col">Codigo venta</th>
+                <th scope="col">Codigo Compra</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Fecha</th>
                 <th scope="col">Creado por</th>
                 <th scope="col">Fecha de creacion</th>
                 <th scope="col">Modificado por</th>
                 <th scope="col">Fecha modicifación</th>
-                <th scope="col">Estado</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>1</td>
                 <td>1</td>
-                <td>Vailla 3/4</td>
-                <td>195.00</td>
-                <td>50</td>
-                <td>Metales</td>
-                <td>Seydi Lara</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>20</td>
+                <td>Producto x</td>
                 <td>2023-02-19 22:52:05</td>
                 <td>Seydi Lara</td>
                 <td>2023-02-19 22:52:05</td>
-                <td>Activo</td>
+                <td>Seydi Lara</td>
+                <td>2023-02-19 22:52:05</td>
             </tr>
         </tbody>
     </table>
@@ -94,6 +95,10 @@
                     extend: 'print',
                     text: 'Imprimir',
                     className: 'btn btn-warning glyphicon glyphicon-duplicate'
+                },
+                {
+                    extend: 'excel',
+                    className: 'btn btn-success glyphicon glyphicon-duplicate'
                 }
             ]
         });
