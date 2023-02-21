@@ -378,6 +378,12 @@ return [
        'icon_color' => 'green',
        'icon'    => 'fas   fa-folder',
        'submenu' => [
+        [
+            'text' => 'Prodcutos',
+            'icon_color' => 'yellow',
+            'icon' => 'fas   fa-folder',
+            'url'  => '/producto',
+        ], 
            [
                'text' => 'Reporte Inventario',
                'icon_color' => 'yellow',
