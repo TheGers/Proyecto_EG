@@ -51,12 +51,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
+     /**
      * The accessors to append to the model's array form.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function adminlte_image(){
+        return 'https://picsum.photos/300/300';
+    }
+    
+    public function adminlte_profile_url(){
+        return 'profile/username';
+    }
 }
+

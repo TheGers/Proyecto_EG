@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'Home',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| Empresa Generica',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>GENERICO</b>',
+    'logo' => '<b>Empresa</b>Generica',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'Empresa Generica',
 
     /*
     |--------------------------------------------------------------------------
@@ -131,10 +131,10 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => true,
-    'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_header_class' => 'bg-info',
+    'usermenu_image' => true,
     'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -150,7 +150,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -167,12 +167,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_card' => 'bg-gradient-white',
+    'classes_auth_header' => 'd-none',
+    'classes_auth_body' => 'bg-gradient-white',
+    'classes_auth_footer' => 'd-none',
+    'classes_auth_icon' => 'fa-fw text-light',
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -187,14 +187,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
-    'classes_brand_text' => '',
-    'classes_content_wrapper' => '',
+    'classes_brand' => 'bg-white',
+    'classes_brand_text' => 'text-black',
+    'classes_content_wrapper' => '',//
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-light-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-cyan navbar-light',//
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -298,7 +298,7 @@ return [
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => false,
+            'topnav_right' => true,
         ],
 
         // Sidebar items:
@@ -311,101 +311,85 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        /*[
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
+    
+
+        ['header' =>'MENU'],
+        
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Personas',
+            'icon_color' => 'blue',
+            'icon'    => 'fas fa-users',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Personas',
+                    'icon_color' => 'cyan',
+                    'icon' => 'fas fa-user plus',
+                    'url'  => '/personas',
                 ],
+                
+
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Usuarios',
+                    'icon_color' => 'black',
+                    'icon' => 'fas fa-child',
+                    'url'  => '/usuarios',
                 ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
+
             ],
-        ],*/
-        ['header' => 'Usuarios'],
-        [
-            'text'       => 'Usuarios',
-            'route' => 'admin.usuarios.index',
-            'icon_color' => 'fas fa-fw fas fw-cubes',
+            
         ],
+        
+        [ 
+         'text'    => 'Venta',
+        'icon_color' => 'green',
+        'icon' => 'fas fa-list-alt',
+        'submenu' => [
+            [
+                'text' => 'Venta',
+                'icon_color' => 'green',
+                'icon' => 'fas fa-list-alt',
+                'url'  => '/facturacion',
+            ],
+            
+            [
+                'text'       => 'Reporte de Ventas',
+                'icon_color' => 'blue',
+                'icon' => 'fas fa-list-alt',
+                'url'        => '/reportedeventas',
+            ],
+        
+            ],
+        ],
+        [
+            'text'    => 'Compra',
+        'icon_color' => 'yellow',
+        'icon'    => 'fas fa-shopping-cart',
+        'submenu' => [
+            [
+                'text' => 'Compra',
+                'icon_color' => 'yellow',
+                'icon'    => 'fas fa-shopping-cart',
+                'url'  => '/compras',
+            ],
+            
+        ],],
+    [ 
+        'text'    => 'Inventario',
+       'icon_color' => 'green',
+       'icon'    => 'fas   fa-folder',
+       'submenu' => [
+           [
+               'text' => 'Reporte Inventario',
+               'icon_color' => 'yellow',
+               'icon' => 'fas   fa-folder',
+               'url'  => '/inventario',
+           ], ],
+       ],
 
-
-        ['header' => 'Ventas'],
-        [
-            'text'       => 'Facturacion',
-            'icon_color' => 'blue',
-            'url'        => '/facturacion',
-        ],
-        [
-            'text'       => 'Reporte de Ventas',
-            'icon_color' => 'blue',
-            'url'        => '/reportedeventas',
-        ],
-
-        ['header' => 'Compras'],
-        [
-            'text'       => 'Compras',
-            'icon_color' => 'red',
-            'url'        => '/compras',
-        ],
-
-        ['header' => 'Productos'],
-        [
-            'text'       => 'Producto',
-            'icon_color' => 'yellow',
-            'url'        => '/producto',
-        ],
-        [
-            'text'       => 'Inventario',
-            'icon_color' => 'yellow',
-            'url'        => '/inventario',
-        ],
-
+       [
+  
+],
+     
     ],
 
     /*

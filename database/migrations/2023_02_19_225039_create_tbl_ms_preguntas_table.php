@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('tbl_ms_preguntas', function (Blueprint $table) {
             $table->comment('');
             $table->integer('COD_PREGUNTA', true);
-            $table->string('PREGUNTA')->nullable();
-            $table->string('RESPUESTA')->nullable();
-            $table->string('CREADO_POR')->nullable();
+            $table->string('PREGUNTA', 45)->nullable();
+            $table->string('CREADO_POR', 45)->nullable();
             $table->dateTime('FECHA_CREACION')->nullable();
-            $table->string('MODIFICADO_POR')->nullable();
+            $table->string('MODIFICADO_POR', 45)->nullable();
             $table->dateTime('FECHA_MODIFICACION')->nullable();
             $table->string('Estado')->nullable();
         });
