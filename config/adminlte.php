@@ -342,12 +342,12 @@ return [
         [ 
          'text'    => 'Venta',
         'icon_color' => 'green',
-        'icon' => 'fas fa-list-alt',
+        'icon' => 'fas fa-chart-line',
         'submenu' => [
             [
                 'text' => 'Venta',
                 'icon_color' => 'green',
-                'icon' => 'fas fa-list-alt',
+                'icon' => 'fas fa-chart-bar',
                 'url'  => '/facturacion',
             ],
             
