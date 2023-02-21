@@ -16,15 +16,19 @@
 
 @section('content')
 
-<!-- <a href="Productos.Producto.productoCreate" class="btn btn-primary">CREAR</a> -->
-<a href="Productos/Producto/productoCreate"> 
+<!-- <a href="Productos.Producto.productoCreate" class="btn btn-primary">CREAR</a>  -->
+<a href="Productos/Producto/productoCreate" > 
    <span>Nuevo producto</span> <i class = "fas fa-plus-square"></i>
-</a>
+</a> 
 
+<!-- <div style="text-align:right; margin:1px; padding: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+    <a href="..productoCreate.blade.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">INICIO</a>
+ </div>
+ -->
 
 
 <div class="table-resposive-sm mt-5"> 
-    <table id="tablareporteventas" class="table table-striped table-bordered table-condensed table-hover">
+    <table id="tablaproductos" class="table table-striped table-bordered table-condensed table-hover">
         <thead class ="thead-dark">
             <tr>
                 <th>#</th>
@@ -38,6 +42,8 @@
                 <th scope="col">Modificado por</th>
                 <th scope="col">Fecha modicifación</th>
                 <th scope="col">Estado</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +59,8 @@
                 <td>Seydi Lara</td>
                 <td>2023-02-19 22:52:05</td>
                 <td>Activo</td>
+                <td><a href=" " class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">EDITAR</a></td>
+                <td><a href=" " class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">ELIMINAR</a></td>
             </tr>
         </tbody>
     </table>

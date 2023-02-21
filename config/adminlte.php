@@ -379,7 +379,7 @@ return [
        'icon'    => 'fas   fa-folder',
        'submenu' => [
         [
-            'text' => 'Prodcutos',
+            'text' => 'Productos',
             'icon_color' => 'yellow',
             'icon' => 'fas   fa-folder',
             'url'  => '/producto',

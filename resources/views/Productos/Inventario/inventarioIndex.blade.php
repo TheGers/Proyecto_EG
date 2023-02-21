@@ -21,7 +21,7 @@
 
 
 <div class="table-resposive-sm mt-5"> 
-    <table id="tablareporteventas" class="table table-striped table-bordered table-condensed table-hover">
+    <table id="tablainventario" class="table table-striped table-bordered table-condensed table-hover">
         <thead class ="thead-dark">
             <tr>
                 <th>#</th>
