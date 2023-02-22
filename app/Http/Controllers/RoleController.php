@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controllers; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Spatie\Permission\Models\Permission;
@@ -9,16 +10,16 @@ use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        abort_if(Gate::denies('role_index'), 403);
+        //abort_if(Gate::denies('role_index'), 403);
 
-        $roles = Role::paginate(10);
+        $roles = Roles::paginate(10);
 
         return view('roles.index', compact('roles'));
     }
@@ -30,7 +31,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        abort_if(Gate::denies('role_create'), 403);
+        //abort_if(Gate::denies('role_create'), 403);
 
         $permissions = Permission::all()->pluck('name', 'id');
         // dd($permissions);
@@ -61,10 +62,10 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        abort_if(Gate::denies('role_show'), 403);
+        //abort_if(Gate::denies('role_show'), 403);
 
         $role->load('permissions');
-        return view('roles.show', compact('role'));
+        return view('roles.show', compact('roles')); 
     }
 
     /**
@@ -75,7 +76,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        abort_if(Gate::denies('role_edit'), 403);
+        //abort_if(Gate::denies('role_edit'), 403);
 
         $permissions = Permission::all()->pluck('name', 'id');
         $role->load('permissions');
@@ -90,14 +91,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, $id)
     {
-        $role->update($request->only('name'));
-
-        // $role->permissions()->sync($request->input('permissions', []));
-        $role->syncPermissions($request->input('permissions', []));
-
-        return redirect()->route('roles.index');
+        //
     }
 
     /**
@@ -106,12 +102,8 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy($id)
     {
-        abort_if(Gate::denies('role_delete'), 403);
-
-        $role->delete();
-
-        return redirect()->route('roles.index');
+        //
     }
 }

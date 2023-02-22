@@ -9,8 +9,8 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Permisos</h4>
-                  <p class="card-category">Permisos registrados</p>
+                  <h4 class="card-title">Permisos</h4><br>
+                  <br><p class="card-category">Permisos registrados</p>
                 </div>
                 <div class="card-body">
                   <div class="row">
@@ -24,7 +24,7 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Created_at</th>
-                        <th class="text-right">Acciones</th>
+                        <br><th class="text-right">Acciones</th>
                       </thead>
                       <tbody>
                         @forelse ($permissions as $permission)

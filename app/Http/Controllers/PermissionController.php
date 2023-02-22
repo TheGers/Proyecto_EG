@@ -43,7 +43,7 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //Permission::create($request->only('name'));
+        Permission::create($request->only('name'));
 
         return redirect()->route('permissions.index');
     }
