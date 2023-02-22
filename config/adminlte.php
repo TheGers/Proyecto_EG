@@ -392,6 +392,25 @@ return [
            ], ],
        ],
 
+       [ 
+        'text'    => 'Permisos y Roles',
+       'icon_color' => 'green',
+       'icon'    => 'fas   fa-folder',
+       'submenu' => [
+        [
+            'text' => 'Permisos',
+            'icon_color' => 'yellow',
+            'icon' => 'fas   fa-folder',
+            'url'  => '/permissions',
+        ], 
+           [
+               'text' => 'Roles',
+               'icon_color' => 'yellow',
+               'icon' => 'fas   fa-folder',
+               'url'  => '/role',
+           ], ],
+       ],
+
        [
   
 ],
