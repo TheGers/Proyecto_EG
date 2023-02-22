@@ -330,7 +330,7 @@ return [
                     'text' => 'Usuarios',
                     'icon_color' => 'black',
                     'icon' => 'fas fa-child',
-                    'url'  => '/usuarios',
+                    'url'  => '/register',
                 ],
                 [ 
                     'text'    => 'Permisos y Roles',
