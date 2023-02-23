@@ -43,7 +43,7 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        Permission::create($request->only('name'));
+        //Permission::create($request->only('name'));
 
         return redirect()->route('permissions.index');
     }
@@ -71,7 +71,7 @@ class PermissionController extends Controller
     {
         //abort_if(Gate::denies('permission_edit'), 403);
 
-        return view('permissions.edit', compact('permission'));
+        return view('permissions.edit');
     }
 
     /**
@@ -83,7 +83,7 @@ class PermissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $permission->update($request->only('name'));
+        $permissions->update($request->only('name'));
 
         return redirect()->route('permissions.index');
     }
@@ -98,7 +98,7 @@ class PermissionController extends Controller
     {
         //abort_if(Gate::denies('permission_delete'), 403);
 
-        $permission->delete();
+        $permissions->delete();
 
         return redirect()->route('permissions.index');
     }
