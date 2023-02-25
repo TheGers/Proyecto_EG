@@ -3,7 +3,6 @@
 use App\Http\Controllers\facturacionController;
 use App\Http\Controllers\productocontroller;
 use App\Http\Controllers\reportedeventasController;
-use App\Http\Controllers\inventarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,10 +36,19 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
         return view('dashboard');
     })->name('dashboard');
 
-    Route::resource('facturacion',facturacionController::class)->names('facturacion');
-    Route::resource('reportedeventas', reportedeventasController::class)->names('reportedeventas');
-    Route::resource('producto', productocontroller::class)->names('producto');
-    Route::resource('inventario', inventarioController::class)->names('inventario');
+    Route::group(['middleware'=>'auth'], function(){
+        Route::resource('personas','App\Http\Controllers\PersonaController');
+        Route::resource('facturacion',facturacionController::class)->names('facturacion');
+        Route::resource('reportedeventas', reportedeventasController::class)->names('reportedeventas');
+        Route::resource('producto', productocontroller::class)->names('producto');
+        Route::resource('inventario', inventarioController::class)->names('inventario');
+
+        Route::resource('permissions', App\Http\Controllers\PermissionController::class);
+        Route::resource('roles', App\Http\Controllers\RoleController::class);
+    
+    });
+
+
 
 
 

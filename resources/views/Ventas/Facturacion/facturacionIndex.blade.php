@@ -84,7 +84,7 @@
                                     <option value="0">Seleccione Documento </option>
                                     <option value="1" selected="true">Factura</option>
                                     <option value="0">Boleta </option>
-                                    <option value="0">Tiquet </option>
+                                    <option value="0">Ticket </option>
                                 </select>
 
                                 <span id="validate_categoria" class="text-danger small fst-itallic" style="display:none">
@@ -102,7 +102,7 @@
                                     id="selTipoPago">
                                     <option value="0">Seleccione Tipo de Pago </option>
                                     <option value="1" selected="true">Efectivo</option>
-                                    <option value="0">Targeta </option>
+                                    <option value="0">Tarjeta </option>
                                 </select>
 
                                 <span id="validate_categoria" class="text-danger small fst-itallic" style="display:none">
@@ -151,7 +151,7 @@
                             </div>
 
                             <div class="col-12">
-                                <h6 class="text-start text-danger fw-bold">Vuelto L./ <span id="Vuelto">0.00</span>
+                                <h6 class="text-start text-danger fw-bold">Cambio L./ <span id="Vuelto">0.00</span>
                                 </h6>
                             </div>
                         </div>

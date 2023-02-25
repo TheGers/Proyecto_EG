@@ -326,14 +326,34 @@ return [
                     'icon' => 'fas fa-user plus',
                     'url'  => '/personas',
                 ],
-                
-
                 [
                     'text' => 'Usuarios',
                     'icon_color' => 'black',
                     'icon' => 'fas fa-child',
-                    'url'  => '/usuarios',
+                    'url'  => '/register',
                 ],
+                [ 
+                    'text'    => 'Permisos y Roles',
+                   'icon_color' => 'black',
+                   'icon'    => 'fas   fa-mouse-pointer',
+                   'submenu' => [
+                    [
+                        'text' => 'Permisos',
+                        'icon_color' => 'danger',
+                        'icon' => 'fas   fa-minus-circle',
+                        'url'  => '/permissions',
+                    ], 
+                       [
+                           'text' => 'Roles',
+                           'icon_color' => 'yellow',
+                           'icon' => 'fas   fa-users',
+                           'url'  => '/roles',
+                       ], ],
+                   ],
+            
+                
+
+              
 
             ],
             
@@ -342,19 +362,19 @@ return [
         [ 
          'text'    => 'Venta',
         'icon_color' => 'green',
-        'icon' => 'fas fa-list-alt',
+        'icon' => 'fas fa-chart-line',
         'submenu' => [
             [
                 'text' => 'Venta',
                 'icon_color' => 'green',
-                'icon' => 'fas fa-list-alt',
+                'icon' => 'fas fa-chart-bar',
                 'url'  => '/facturacion',
             ],
             
             [
                 'text'       => 'Reporte de Ventas',
-                'icon_color' => 'blue',
-                'icon' => 'fas fa-list-alt',
+                'icon_color' => 'black',
+                'icon' => 'fas  fa-edit ',
                 'url'        => '/reportedeventas',
             ],
         
@@ -376,22 +396,23 @@ return [
     [ 
         'text'    => 'Inventario',
        'icon_color' => 'green',
-       'icon'    => 'fas   fa-folder',
+       'icon'    => 'fas   fa-tags',
        'submenu' => [
         [
-            'text' => 'Prodcutos',
+            'text' => 'Productos',
             'icon_color' => 'yellow',
             'icon' => 'fas   fa-folder',
             'url'  => '/producto',
         ], 
            [
                'text' => 'Reporte Inventario',
-               'icon_color' => 'yellow',
-               'icon' => 'fas   fa-folder',
+               'icon_color' => 'black',
+               'icon' => 'fas    fa-edit ',
                'url'  => '/inventario',
            ], ],
        ],
 
+       
        [
   
 ],
