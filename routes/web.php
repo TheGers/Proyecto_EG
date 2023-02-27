@@ -3,6 +3,7 @@
 use App\Http\Controllers\facturacionController;
 use App\Http\Controllers\productocontroller;
 use App\Http\Controllers\reportedeventasController;
+use App\Http\Controllers\inventarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
