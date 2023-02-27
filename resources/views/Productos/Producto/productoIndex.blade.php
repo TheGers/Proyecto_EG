@@ -9,7 +9,7 @@
 
 
 @section('content_header')
-    <h3> Listado de productos</h3>
+    <h1 class="text-center">Listado de Productos</h1>
     <hr class ="bg-dark border-1 border-top border-dark">
 
 @stop
@@ -17,9 +17,9 @@
 @section('content')
 
 <!-- <a href="Productos.Producto.productoCreate" class="btn btn-primary">CREAR</a>  -->
-<a href="Productos/Producto/productoCreate" > 
-   <span>Nuevo producto</span> <i class = "fas fa-plus-square"></i>
-</a> 
+<a href="{{ route('producto.create') }}"
+   <span>Agregar</span> <i class = "fas fa-plus-square"></i>
+</a>
 
 <!-- <div style="text-align:right; margin:1px; padding: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
     <a href="..productoCreate.blade.php" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">INICIO</a>
@@ -27,7 +27,7 @@
  -->
 
 
-<div class="table-resposive-sm mt-5"> 
+<div class="table-resposive-sm mt-5">
     <table id="tablaproductos" class="table table-striped table-bordered table-condensed table-hover">
         <thead class ="thead-dark">
             <tr>
@@ -42,7 +42,6 @@
                 <th scope="col">Modificado por</th>
                 <th scope="col">Fecha modicifación</th>
                 <th scope="col">Estado</th>
-                <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -59,8 +58,17 @@
                 <td>Seydi Lara</td>
                 <td>2023-02-19 22:52:05</td>
                 <td>Activo</td>
-                <td><a href=" " class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">EDITAR</a></td>
-                <td><a href=" " class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">ELIMINAR</a></td>
+                <td class="text-center">
+                    {{-- Boton de Editar --}}
+                    <form action="{{ route('producto.destroy',1) }}" method="POST">
+                        <a href="{{ route('producto.edit',1) }}"
+                            class="btn btn-warning btm-sm fa fa-edit">
+                        </a>
+                        <button type="submit"
+                            class="btn btn-danger btm-sm fa fa-times-circle"
+                            ></button>
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -86,7 +94,7 @@
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#tablareporteventas').DataTable({
+        $('#tablaproductos').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
             },
@@ -96,12 +104,16 @@
                 {
                     extend: 'pdf',
                     className: 'btn btn-danger glyphicon glyphicon-duplicate',
-                   
-                }, 
+
+                },
                 {
                     extend: 'print',
                     text: 'Imprimir',
-                    className: 'btn btn-warning glyphicon glyphicon-duplicate'
+                    className: 'btn btn-secondary glyphicon glyphicon-duplicate'
+                },
+                {
+                    extend: 'excel',
+                    className: 'btn btn-success glyphicon glyphicon-duplicate'
                 }
             ]
         });

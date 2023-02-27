@@ -21,7 +21,7 @@
 <div class="Formulario"  style="width:800px; margin:1px auto; padding:100px;  background-color: rgb(211, 211, 211);"  >
         <div class="row">
             <div class="col-12">
-                
+
                 <h3 style="text-align:center">
                     Agregar Producto
                 </h3>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-12" style="font-weight:bold">
                 <form class="producto">
-                   
+
                     <label for="" >Código Producto</label>
                     <input type="text" id="CodigoProducto" class="form-control"  placeholder="Ingrese el código del producto">
                     <br>
@@ -49,7 +49,7 @@
                     <input type="date" id="FechaCreacion" class="form-control" placeholder="Ingrese la fecha de creación">
                     <br>
                     <label for="">MODIFICADO_POR</label>
-                    <input type="date" id="ModificadoPor" class="form-control" placeholder="Ingrese el nombre del modificador">
+                    <input type="text" id="ModificadoPor" class="form-control" placeholder="Ingrese el nombre del modificador">
                     <br>
                     <label for="">FECHA_MODIFICACION</label>
                     <input type="date" id="FechaModificacion" class="form-control" placeholder="Ingrese la fecha de modificación">
@@ -58,9 +58,10 @@
                     <input type="text" id="estado" class="form-control" placeholder="Ingrese el estado">
                     <hr class ="bg-dark border-1 border-top border-dark">
                     <div id="btnAgregarProducto" style="text-align:right">
-                        <input  type="submit" id="btnAgregar" onclick=" " value="Ingresar Producto" class="btn btn-primary">
+                        <input  type="submit" id="btnAgregar" onclick=" " value="Agregar" class="btn btn-primary">
+                        <input  type="submit" id="btnAgregar" onclick=" " value="Cancelar" class="btn btn-danger">
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -76,6 +77,6 @@
 
 @section('js')
     <script>
-       
+
     </script>
 @stop
