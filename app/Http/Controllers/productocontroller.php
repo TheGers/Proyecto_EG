@@ -39,16 +39,22 @@ class productocontroller extends Controller
     {
       $request->validate([
         'producto' => 'required|unique:productos',
-        'valor' => 'required'
+        'categoria' => 'required'
       ]);
 
       $data = [
+        'cod_producto' => $request->codigodeproducto,
         'producto' => $request->producto,
-        'valor' =>$request->valor,
-        'CREADO_POR'=>Auth()->user()->id
+        'precio' =>$request->preciodeproducto,
+        'existencia' =>$request->existencia,
+        'categoria' =>$request->categoria,
+        'CREADO_POR'=>Auth()->user()->id,
+        'FECHA_CREACION' => $request->FECHA_CREACION,
+        'MODIFICADO_POR'=>Auth()->user()->id,
+        'FECHA_MODIFICACION' => $request->FECHA_MODIFICACION,
+        'estado' =>$request->estado,
 
       ];
-
     }
 
     /**
