@@ -17,6 +17,8 @@
 @stop
 
 @section('content')
+<form action="{{ route('producto.store') }}" method="POST">
+    @csrf
 
 <div class="Formulario"  style="width:800px; margin:1px auto; padding:100px;  background-color: rgb(211, 211, 211);"  >
         <div class="row">
@@ -56,12 +58,23 @@
                     <br>
                     <label for="">Estado</label>
                     <input type="text" id="estado" class="form-control" placeholder="Ingrese el estado">
-                    <hr class ="bg-dark border-1 border-top border-dark">
-                    <div id="btnAgregarProducto" style="text-align:right">
-                        <input  type="submit" id="btnAgregar" onclick=" " value="Agregar" class="btn btn-primary">
-                        <input  type="submit" id="btnAgregar" onclick=" " value="Cancelar" class="btn btn-danger">
-                    </div>
 
+                    {{-- BORDE QUE SEPARA LAS CASILLAS CON LOS BOTONES --}}
+                    <hr class ="bg-dark border-1 border-top border-dark">
+
+                    {{-- BOTONES DE CANCELAR Y AGREGAR --}}
+                    <div class="row">
+                    <div class="col-sm-6" col-xs-12 mb-2">
+                        <a href="{{ route('producto.index') }}"
+                        class="btn btn-danger w-100"
+                        >Cancelar <i class="fa fa-times-circle ml-2"></i></a>
+                    </div>
+                    <div class="col-sm-6" col-xs-12 mb-2">
+                        <button type="submit" class="btn btn-success w-100">
+                             Guardar <i class="fa fa-check-circle ml-2"></i>
+                        </button>
+                    </div>
+                    </div>
                 </form>
             </div>
         </div>

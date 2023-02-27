@@ -1,6 +1,8 @@
 @extends('adminlte::page')
 
 @section('css')
+
+{{-- FLECHITAS PARA ORDENAR DE ARRIBA PARA ABAJO --}}
 <!-- <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet"> -->
 <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @stop
@@ -9,6 +11,7 @@
 
 
 @section('content_header')
+{{-- TITULO DE LA PANTALLA --}}
     <h1 class="text-center">Listado de Productos</h1>
     <hr class ="bg-dark border-1 border-top border-dark">
 
@@ -27,7 +30,7 @@
  -->
 
 
-<div class="table-resposive-sm mt-5">
+<div class="table-resposive-sm mt-5}">
     <table id="tablaproductos" class="table table-striped table-bordered table-condensed table-hover">
         <thead class ="thead-dark">
             <tr>

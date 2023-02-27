@@ -311,10 +311,10 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-    
+
 
         ['header' =>'MENU'],
-        
+
         [
             'text'    => 'Personas',
             'icon_color' => 'blue',
@@ -332,7 +332,7 @@ return [
                     'icon' => 'fas fa-child',
                     'url'  => '/register',
                 ],
-                [ 
+                [
                     'text'    => 'Permisos y Roles',
                    'icon_color' => 'black',
                    'icon'    => 'fas   fa-mouse-pointer',
@@ -342,7 +342,7 @@ return [
                         'icon_color' => 'danger',
                         'icon' => 'fas   fa-minus-circle',
                         'url'  => '/permissions',
-                    ], 
+                    ],
                        [
                            'text' => 'Roles',
                            'icon_color' => 'yellow',
@@ -350,16 +350,16 @@ return [
                            'url'  => '/roles',
                        ], ],
                    ],
-            
-                
 
-              
+
+
+
 
             ],
-            
+
         ],
-        
-        [ 
+
+        [
          'text'    => 'Venta',
         'icon_color' => 'green',
         'icon' => 'fas fa-chart-line',
@@ -370,18 +370,18 @@ return [
                 'icon' => 'fas fa-chart-bar',
                 'url'  => '/facturacion',
             ],
-            
+
             [
                 'text'       => 'Reporte de Ventas',
                 'icon_color' => 'black',
                 'icon' => 'fas  fa-edit ',
                 'url'        => '/reportedeventas',
             ],
-        
+
             ],
         ],
         [
-            'text'    => 'Compra',
+            'text'    => 'Compras',
         'icon_color' => 'yellow',
         'icon'    => 'fas fa-shopping-cart',
         'submenu' => [
@@ -391,9 +391,17 @@ return [
                 'icon'    => 'fas fa-shopping-cart',
                 'url'  => '/compras',
             ],
-            
+            [
+                'text' => 'Reporte de Compras',
+                'icon_color' => 'black',
+                'icon' => 'fas    fa-edit ',
+                'url'  => '/reportedecompras',
+            ],
+
+
+
         ],],
-    [ 
+    [
         'text'    => 'Inventario',
        'icon_color' => 'green',
        'icon'    => 'fas   fa-tags',
@@ -403,7 +411,7 @@ return [
             'icon_color' => 'yellow',
             'icon' => 'fas   fa-folder',
             'url'  => '/producto',
-        ], 
+        ],
            [
                'text' => 'Reporte Inventario',
                'icon_color' => 'black',
@@ -412,11 +420,11 @@ return [
            ], ],
        ],
 
-       
+
        [
-  
+
 ],
-     
+
     ],
 
     /*

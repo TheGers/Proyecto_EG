@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class productocontroller extends Controller
 {
@@ -15,7 +16,7 @@ class productocontroller extends Controller
     public function index()
     {
         return view('Productos.Producto.productoIndex');
-        
+
     }
 
     /**
@@ -36,7 +37,18 @@ class productocontroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+        'producto' => 'required|unique:productos',
+        'valor' => 'required'
+      ]);
+
+      $data = [
+        'producto' => $request->producto,
+        'valor' =>$request->valor,
+        'CREADO_POR'=>Auth()->user()->id
+
+      ];
+
     }
 
     /**
